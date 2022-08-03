@@ -8,13 +8,9 @@ from django.http import JsonResponse
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
-
 import csv
 from django.core.files.base import ContentFile
 from django.core.files.storage import FileSystemStorage
-from Leitura import serializer
-from Leitura.admin import Nomedoponto
-
 from Leitura.models import Telemetria
 from Leitura.serializer import TelemetriaSerializer
 
