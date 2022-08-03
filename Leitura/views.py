@@ -13,6 +13,7 @@ import csv
 from django.core.files.base import ContentFile
 from django.core.files.storage import FileSystemStorage
 from Leitura import serializer
+from Leitura.admin import Nomedoponto
 
 from Leitura.models import Telemetria
 from Leitura.serializer import TelemetriaSerializer
@@ -40,6 +41,8 @@ class TelemetriaViewSet(viewsets.ModelViewSet):
             telemetria_list.append(
                 Telemetria(
                     
+                    xid = row ["xid"],
+                    nomedoponto = row ["nomedoponto"],
                     ts = row["ts"],
                     dado = row["dado"],
                     Ano = row["Ano"],
